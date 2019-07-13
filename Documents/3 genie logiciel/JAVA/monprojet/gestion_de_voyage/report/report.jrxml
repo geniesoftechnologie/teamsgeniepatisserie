@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="40aeec83-42ea-4ed2-9d24-9cc834ab6d3c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     reservation.`id` AS reservation_id,
+     reservation.`id_utilisateur` AS reservation_id_utilisateur,
+     reservation.`nom` AS reservation_nom,
+     reservation.`prenom` AS reservation_prenom,
+     reservation.`passport` AS reservation_passport,
+     reservation.`id_vol` AS reservation_id_vol,
+     reservation.`nom_aeroport` AS reservation_nom_aeroport,
+     reservation.`datedepart` AS reservation_datedepart,
+     reservation.`datearrivee` AS reservation_datearrivee,
+     reservation.`heurdepart` AS reservation_heurdepart,
+     reservation.`heurarrivee` AS reservation_heurarrivee,
+     reservation.`nom_aeroport_ar` AS reservation_nom_aeroport_ar,
+     reservation.`prix` AS reservation_prix,
+     reservation.`dater` AS reservation_dater,
+     reservation.`idf` AS reservation_idf,
+     vol.`id` AS vol_id,
+     vol.`duree` AS vol_duree,
+     avion.`id` AS avion_id,
+     avion.`id_compagnie` AS avion_id_compagnie,
+     avion.`nom_compagnie` AS avion_nom_compagnie,
+     avion.`nom` AS avion_nom
+FROM
+     `reservation` reservation,
+     `vol` vol,
+     `avion` avion]]>
+	</queryString>
+	<field name="reservation_id" class="java.lang.Integer"/>
+	<field name="reservation_id_utilisateur" class="java.lang.Integer"/>
+	<field name="reservation_nom" class="java.lang.String"/>
+	<field name="reservation_prenom" class="java.lang.String"/>
+	<field name="reservation_passport" class="java.lang.String"/>
+	<field name="reservation_id_vol" class="java.lang.Integer"/>
+	<field name="reservation_nom_aeroport" class="java.lang.String"/>
+	<field name="reservation_datedepart" class="java.sql.Date"/>
+	<field name="reservation_datearrivee" class="java.sql.Date"/>
+	<field name="reservation_heurdepart" class="java.lang.String"/>
+	<field name="reservation_heurarrivee" class="java.lang.String"/>
+	<field name="reservation_nom_aeroport_ar" class="java.lang.String"/>
+	<field name="reservation_prix" class="java.lang.Integer"/>
+	<field name="reservation_dater" class="java.sql.Date"/>
+	<field name="reservation_idf" class="java.lang.Integer"/>
+	<field name="vol_id" class="java.lang.Integer"/>
+	<field name="vol_duree" class="java.lang.Integer"/>
+	<field name="avion_id" class="java.lang.Integer"/>
+	<field name="avion_id_compagnie" class="java.lang.Integer"/>
+	<field name="avion_nom_compagnie" class="java.lang.String"/>
+	<field name="avion_nom" class="java.lang.String"/>
+	<variable name="prixreservation" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{reservation_prix}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="281" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="12" width="239" height="28" backcolor="#FFFFFF" uuid="88b225de-ac96-4296-b403-da5df17683d4"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="12" width="228" height="40" uuid="35afa238-3524-4ec1-9cc1-111cba4101c6"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="50" width="123" height="20" uuid="7f6b013f-c1e6-4fa0-a8e3-0b35dab5a2d8"/>
+				<text><![CDATA[RESERVATION REF :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="70" width="123" height="20" uuid="90800a51-e2b2-4c81-bc59-820ce3d2ae08"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="90" width="123" height="20" uuid="0c8267ae-8c58-46c2-8e00-59177fdba6bb"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="110" width="123" height="20" uuid="b0729a12-18dc-4196-b02d-151e100b6fb0"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="150" width="234" height="20" uuid="d8a4c96a-5c0d-4849-9831-1151b2b87a7b"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="170" width="123" height="20" uuid="5c96bcf1-0bb3-4cc1-bc6a-25c06c7d111d"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="190" width="234" height="20" uuid="983f8c1f-4734-4112-a680-679361a785f2"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="210" width="76" height="20" uuid="d433d95d-561d-4a5e-8629-b3bed80f8cc3"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="81" y="210" width="100" height="20" uuid="7968ff25-5a0f-48f7-b3bf-1de0774c6f68"/>
+				<textFieldExpression><![CDATA[$F{reservation_dater}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="130" width="53" height="20" uuid="e959918c-4980-4aa8-8673-24d80423d7f9"/>
+				<textFieldExpression><![CDATA[$F{reservation_nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="58" y="130" width="10" height="20" uuid="ade29aa3-c69a-4dfb-9a64-bf282083d4a2"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="68" y="130" width="86" height="20" uuid="54b40c4b-1331-4cf9-9094-bf3b134c9979"/>
+				<textFieldExpression><![CDATA[$F{reservation_prenom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="237" width="555" height="20" uuid="642661fb-eef5-4216-ab51-44d94bdbfcb0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="257" width="555" height="20" uuid="408e8b19-11b8-482f-ae56-502dc890a12b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="52" width="53" height="20" uuid="37ce6a78-675a-4302-996b-beec993ae011"/>
+				<text><![CDATA[reft01tiq4mikl]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="181" y="52" width="21" height="20" uuid="70d2bdfd-53f2-4adb-8e4a-36f1f73d0b81"/>
+				<textFieldExpression><![CDATA[$F{reservation_id_utilisateur}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="7" width="95" height="20" uuid="fd3b2dc3-ba78-4d7b-8e94-a976baa14387"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTURE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="7" width="87" height="20" uuid="7c2d75f5-175f-4d20-aa0f-1cc2f0c53832"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ARRIVAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="7" width="58" height="20" uuid="e380d5fd-cd0c-484a-af41-55dac66acca3"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DUREE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="74" width="555" height="16" uuid="13d05d6e-79e6-464d-ab38-ad56423f72a9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="555" height="16" uuid="70f6a68b-edf5-4bb6-a03d-c12de1bc9065"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="40" width="74" height="20" uuid="c8b98010-7af7-4328-ab09-41313b77780d"/>
+				<textFieldExpression><![CDATA[$F{reservation_datedepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="40" width="52" height="20" uuid="01f4d31a-0661-4439-91b7-2dcff361cfb9"/>
+				<textFieldExpression><![CDATA[$F{reservation_heurdepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="40" width="57" height="20" uuid="a2de0a31-14d9-46db-be52-353ad1472929"/>
+				<textFieldExpression><![CDATA[$F{reservation_datearrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="40" width="43" height="20" uuid="fc4a5547-26f6-488d-8889-6ae0f5256c37"/>
+				<textFieldExpression><![CDATA[$F{reservation_heurarrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="20" width="57" height="20" uuid="2904ab2d-bf4b-44c1-80f8-69dd4d0a9a10"/>
+				<textFieldExpression><![CDATA[$F{reservation_nom_aeroport_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="106" width="555" height="16" uuid="657d6c07-e05c-4f4b-9118-8d00b4b5d067"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="20" width="74" height="20" uuid="98b2a8e5-94f2-4fce-963c-0a03333bd8f2"/>
+				<textFieldExpression><![CDATA[$F{reservation_nom_aeroport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="0" width="60" height="20" uuid="ca86bb0f-735d-41f4-a63f-3942fc357a71"/>
+				<textFieldExpression><![CDATA[$F{avion_nom_compagnie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="0" width="67" height="20" uuid="fea1ff3d-4f75-49a9-ac36-cbbab990f8d1"/>
+				<textFieldExpression><![CDATA[$F{avion_nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="40" width="7" height="20" uuid="80460455-7db8-4076-bef9-33dddd7b5fd9"/>
+				<textFieldExpression><![CDATA[$F{vol_duree}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="480" y="40" width="10" height="20" uuid="dc85d05d-ec72-4530-8364-118f9f935d78"/>
+				<text><![CDATA[H]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="40" width="10" height="20" uuid="0f32fef1-c1df-401e-b7c1-0173f84511b0"/>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="40" width="10" height="20" uuid="6f7c81b9-ab5f-428b-9514-f8087177842b"/>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="6" height="20" uuid="b659b831-d2eb-44c2-9f49-f4486e486715"/>
+				<text><![CDATA[--]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="224" y="0" width="100" height="20" uuid="e78dbc5e-0155-4793-b275-0a0409eab93a"/>
+				<text><![CDATA[BAGGAGE PERMIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="20" width="32" height="20" uuid="d0fd33a0-728d-4bc3-8e4f-33c1f253f6e2"/>
+				<text><![CDATA[50 KG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="40" width="132" height="20" uuid="a2e6776f-5a2b-4bc9-9067-f985a03c26b7"/>
+				<text><![CDATA[INFORMATION GENERALE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="60" width="88" height="20" uuid="6805b5c9-25d0-4ecb-aa8b-e0b0c81775cd"/>
+				<text><![CDATA[PRIX DU BILLET ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="305" y="60" width="45" height="20" uuid="22bfdd81-adcd-4bf2-a169-729cb059bc37"/>
+				<textFieldExpression><![CDATA[$V{prixreservation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="555" height="16" uuid="909777ed-b567-43dd-b31e-4f6c018ee1b5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

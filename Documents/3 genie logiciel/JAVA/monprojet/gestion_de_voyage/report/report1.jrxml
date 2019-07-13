@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0db2e24-dc12-4a2a-ac4a-ee52d6e6610c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     reservationhadj.`id` AS reservationhadj_id,
+     reservationhadj.`id_utilisateur` AS reservationhadj_id_utilisateur,
+     reservationhadj.`nom` AS reservationhadj_nom,
+     reservationhadj.`prenom` AS reservationhadj_prenom,
+     reservationhadj.`passport` AS reservationhadj_passport,
+     reservationhadj.`id_vol` AS reservationhadj_id_vol,
+     reservationhadj.`nom_aeroport` AS reservationhadj_nom_aeroport,
+     reservationhadj.`datedepart` AS reservationhadj_datedepart,
+     reservationhadj.`datearrivee` AS reservationhadj_datearrivee,
+     reservationhadj.`heurdepart` AS reservationhadj_heurdepart,
+     reservationhadj.`heurarrivee` AS reservationhadj_heurarrivee,
+     reservationhadj.`nom_aeroport_ar` AS reservationhadj_nom_aeroport_ar,
+     reservationhadj.`prix` AS reservationhadj_prix,
+     reservationhadj.`dater` AS reservationhadj_dater,
+     reservationhadj.`idf` AS reservationhadj_idf,
+     volhadj.`id` AS volhadj_id,
+     volhadj.`id_avion` AS volhadj_id_avion,
+     volhadj.`id_aeroport` AS volhadj_id_aeroport,
+     volhadj.`nom_aeroport` AS volhadj_nom_aeroport,
+     volhadj.`datedepart` AS volhadj_datedepart,
+     volhadj.`datearrivee` AS volhadj_datearrivee,
+     volhadj.`heurdepart` AS volhadj_heurdepart,
+     volhadj.`heurarrivee` AS volhadj_heurarrivee,
+     volhadj.`prix` AS volhadj_prix,
+     volhadj.`nbplacereserve` AS volhadj_nbplacereserve,
+     volhadj.`id_aeroport_ar` AS volhadj_id_aeroport_ar,
+     volhadj.`nom_aeroport_ar` AS volhadj_nom_aeroport_ar,
+     volhadj.`duree` AS volhadj_duree,
+     volhadj.`etat` AS volhadj_etat,
+     avion.`id` AS avion_id,
+     avion.`id_compagnie` AS avion_id_compagnie,
+     avion.`nom_compagnie` AS avion_nom_compagnie,
+     avion.`nom` AS avion_nom,
+     avion.`dateentree` AS avion_dateentree,
+     avion.`etat` AS avion_etat,
+     avion.`nbplace` AS avion_nbplace,
+     avion.`picture` AS avion_picture,
+     avion.`uid` AS avion_uid
+FROM
+     `reservationhadj` reservationhadj,
+     `volhadj` volhadj,
+     `avion` avion]]>
+	</queryString>
+	<field name="reservationhadj_id" class="java.lang.Integer"/>
+	<field name="reservationhadj_id_utilisateur" class="java.lang.Integer"/>
+	<field name="reservationhadj_nom" class="java.lang.String"/>
+	<field name="reservationhadj_prenom" class="java.lang.String"/>
+	<field name="reservationhadj_passport" class="java.lang.String"/>
+	<field name="reservationhadj_id_vol" class="java.lang.Integer"/>
+	<field name="reservationhadj_nom_aeroport" class="java.lang.String"/>
+	<field name="reservationhadj_datedepart" class="java.sql.Date"/>
+	<field name="reservationhadj_datearrivee" class="java.sql.Date"/>
+	<field name="reservationhadj_heurdepart" class="java.lang.String"/>
+	<field name="reservationhadj_heurarrivee" class="java.lang.String"/>
+	<field name="reservationhadj_nom_aeroport_ar" class="java.lang.String"/>
+	<field name="reservationhadj_prix" class="java.lang.Integer"/>
+	<field name="reservationhadj_dater" class="java.sql.Date"/>
+	<field name="reservationhadj_idf" class="java.lang.Integer"/>
+	<field name="volhadj_id" class="java.lang.Integer"/>
+	<field name="volhadj_id_avion" class="java.lang.Integer"/>
+	<field name="volhadj_id_aeroport" class="java.lang.Integer"/>
+	<field name="volhadj_nom_aeroport" class="java.lang.String"/>
+	<field name="volhadj_datedepart" class="java.sql.Date"/>
+	<field name="volhadj_datearrivee" class="java.sql.Date"/>
+	<field name="volhadj_heurdepart" class="java.lang.String"/>
+	<field name="volhadj_heurarrivee" class="java.lang.String"/>
+	<field name="volhadj_prix" class="java.lang.Integer"/>
+	<field name="volhadj_nbplacereserve" class="java.lang.Integer"/>
+	<field name="volhadj_id_aeroport_ar" class="java.lang.Integer"/>
+	<field name="volhadj_nom_aeroport_ar" class="java.lang.String"/>
+	<field name="volhadj_duree" class="java.lang.Integer"/>
+	<field name="volhadj_etat" class="java.lang.Integer"/>
+	<field name="avion_id" class="java.lang.Integer"/>
+	<field name="avion_id_compagnie" class="java.lang.Integer"/>
+	<field name="avion_nom_compagnie" class="java.lang.String"/>
+	<field name="avion_nom" class="java.lang.String"/>
+	<field name="avion_dateentree" class="java.sql.Date"/>
+	<field name="avion_etat" class="java.lang.Integer"/>
+	<field name="avion_nbplace" class="java.lang.Integer"/>
+	<field name="avion_picture" class="java.lang.Object"/>
+	<field name="avion_uid" class="java.lang.Integer"/>
+	<variable name="reservationprix" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{reservationhadj_prix}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="280" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="172" width="123" height="20" uuid="7c56b59a-347f-4a86-94ab-be693068c5b6"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="52" width="123" height="20" uuid="13861168-ad5d-48b7-952f-43dbf3c2d2cb"/>
+				<text><![CDATA[RESERVATION REF :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="92" width="123" height="20" uuid="c35a0b87-a50c-4c09-ac7c-9efb9b9933dd"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="238" width="555" height="20" uuid="97511062-571f-41e9-8834-2bea42f9be95"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="72" width="123" height="20" uuid="c6789a28-5eaf-4235-8790-155a8efa765e"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="152" width="234" height="20" uuid="ef736786-0e71-4ca3-a12e-0653225e60e9"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="192" width="234" height="20" uuid="17ac7926-94c8-4ab4-9b63-ef27b0413f16"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="239" height="28" uuid="ba2742c6-cbfa-460f-a6a3-35b0560a4e4e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="112" width="123" height="20" uuid="ce2b9af4-a5ab-4254-9aab-c2dd3919d23f"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="258" width="555" height="20" uuid="3647f0d3-dca2-4f9f-9fea-383e4d9ff644"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="14" width="228" height="40" uuid="209104af-9171-4f83-b991-866b550b6bea"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="212" width="76" height="20" uuid="f92d264e-f73c-41b6-b3d8-4a28cd7c7250"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="5" y="132" width="48" height="20" uuid="fb24236c-5e54-4659-b303-a18a579ce99c"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="53" y="132" width="7" height="20" uuid="3592d993-ed74-4de0-ab96-dd8eda80c358"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="132" width="66" height="20" uuid="897e9a85-e986-43c0-82ab-93a1ac6bc10e"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_prenom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="128" y="52" width="57" height="20" uuid="8fd400d9-7826-4c53-9b9c-f81557c1c5df"/>
+				<text><![CDATA[reft01tiq4mjkl]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="52" width="25" height="20" uuid="f98e4cec-d6c3-475f-a2d7-c9f0294812a1"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_id_utilisateur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="212" width="100" height="20" uuid="fa97948c-6b02-485b-ad76-5f5a4e41569a"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_dater}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="327" y="0" width="87" height="20" uuid="a5e7bba4-8967-48bc-9e33-299a1f6e38f5"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ARRIVAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="58" height="20" uuid="c212e27d-18cc-4dce-8116-b0c7207b2589"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DUREE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="0" width="95" height="20" uuid="918df745-a141-460f-8bec-10fdc49cea9f"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTURE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="24" width="55" height="20" uuid="bfd2d38d-a308-454c-8e9c-805969fdad80"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_nom_aeroport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="4" width="47" height="20" uuid="78781bbf-23bf-4922-bc42-afbf60212dd1"/>
+				<textFieldExpression><![CDATA[$F{avion_nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="207" y="4" width="6" height="20" uuid="94103959-4e85-4678-a3aa-bcd474520431"/>
+				<text><![CDATA[--]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="213" y="4" width="46" height="20" uuid="68151157-4076-4c87-9c58-63f379bd5be8"/>
+				<textFieldExpression><![CDATA[$F{avion_nom_compagnie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="44" width="55" height="20" uuid="faacfad3-b7e5-4c2a-8cfc-77db98060f49"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_datedepart}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="71" y="44" width="10" height="20" uuid="2799d229-5a56-4d5a-831b-fffcad9f33a1"/>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="44" width="33" height="20" uuid="944f7891-959d-4d02-b11c-60abee3ff1a4"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_heurdepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="44" width="44" height="20" uuid="71e8a501-1eee-47cf-8c84-92f5b6cd24bc"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_datearrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="24" width="44" height="20" uuid="690d4abd-6a6d-4eb2-bdab-a9f3dae4ad74"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_nom_aeroport_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="44" width="10" height="20" uuid="93fe93da-5625-4e2c-8eed-bc92c0d7d9e2"/>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="44" width="42" height="20" uuid="a0feaf64-4b0d-4620-b0a7-896931dfed79"/>
+				<textFieldExpression><![CDATA[$F{reservationhadj_heurarrivee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="483" y="43" width="10" height="20" uuid="de066bd4-87b0-48bb-acf5-519a0a58260b"/>
+				<text><![CDATA[H]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="109" width="555" height="16" uuid="b189fb35-cc52-46e8-a6c6-4df3b841d665"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="77" width="555" height="16" uuid="535ae433-e4b1-4b85-86f7-b7e48306b385"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="93" width="555" height="16" uuid="cf089b47-3187-464a-a48e-85b45d073c7b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="475" y="43" width="8" height="20" uuid="1a59071a-fb7c-46fc-b367-001565afd922"/>
+				<textFieldExpression><![CDATA[$F{volhadj_duree}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="222" y="63" width="88" height="20" uuid="fa630762-d37c-4eed-afaf-b6a0cdc61579"/>
+				<text><![CDATA[PRIX DU BILLET ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="3" width="100" height="20" uuid="522ac214-b247-42f9-bf7c-5d219905d84d"/>
+				<text><![CDATA[BAGGAGE PERMIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="23" width="32" height="20" uuid="daee5368-1368-42a3-91e2-fb870c34803b"/>
+				<text><![CDATA[50 KG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="83" width="555" height="16" uuid="7991ac19-6e3e-4e24-9c67-f140d16f1864"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="43" width="132" height="20" uuid="7a051fc6-1c56-4374-aaa9-ad5d64dee6c1"/>
+				<text><![CDATA[INFORMATION GENERALE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="63" width="41" height="20" uuid="344a7779-811c-47fe-9dab-ee1dcec1c7ae"/>
+				<textFieldExpression><![CDATA[$V{reservationprix}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

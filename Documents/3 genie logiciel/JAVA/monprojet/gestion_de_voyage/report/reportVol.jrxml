@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportVol" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="828ee9db-2175-42e6-9fa5-e54dc4fd9722">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     vol.`id` AS vol_id,
+     vol.`id_avion` AS vol_id_avion,
+     vol.`id_aeroport` AS vol_id_aeroport,
+     vol.`nom_aeroport` AS vol_nom_aeroport,
+     vol.`datedepart` AS vol_datedepart,
+     vol.`datearrivee` AS vol_datearrivee,
+     vol.`heurdepart` AS vol_heurdepart,
+     vol.`heurarrivee` AS vol_heurarrivee,
+     vol.`prix` AS vol_prix,
+     vol.`nbplacereserve` AS vol_nbplacereserve,
+     vol.`id_aeroport_ar` AS vol_id_aeroport_ar,
+     vol.`nom_aeroport_ar` AS vol_nom_aeroport_ar,
+     vol.`duree` AS vol_duree,
+     vol.`etat` AS vol_etat
+FROM
+     `vol` vol]]>
+	</queryString>
+	<field name="vol_id" class="java.lang.Integer"/>
+	<field name="vol_id_avion" class="java.lang.Integer"/>
+	<field name="vol_id_aeroport" class="java.lang.Integer"/>
+	<field name="vol_nom_aeroport" class="java.lang.String"/>
+	<field name="vol_datedepart" class="java.sql.Date"/>
+	<field name="vol_datearrivee" class="java.sql.Date"/>
+	<field name="vol_heurdepart" class="java.lang.String"/>
+	<field name="vol_heurarrivee" class="java.lang.String"/>
+	<field name="vol_prix" class="java.lang.Integer"/>
+	<field name="vol_nbplacereserve" class="java.lang.Integer"/>
+	<field name="vol_id_aeroport_ar" class="java.lang.Integer"/>
+	<field name="vol_nom_aeroport_ar" class="java.lang.String"/>
+	<field name="vol_duree" class="java.lang.Integer"/>
+	<field name="vol_etat" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="271" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="195" width="76" height="20" uuid="848aef9f-30a0-4915-ae11-77fbfaa37abe"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="226" width="555" height="20" uuid="034c84bb-33ef-4094-a79e-1a5595df927a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="241" height="28" uuid="ba7b0381-7076-4d43-aa73-79864c2a8725"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="175" width="234" height="20" uuid="396b9156-34fb-4127-8d4d-4b9a36b8d9bb"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="135" width="234" height="20" uuid="a0095f29-999e-4776-ac88-44e5f10d9104"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="155" width="123" height="20" uuid="b8661b5e-ecc8-4e7a-bb4d-cb8b2831446c"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="75" width="123" height="20" uuid="26f65367-61aa-4450-bd90-003ffd2856fb"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="115" width="123" height="20" uuid="34a01147-92e2-41c0-b1da-4d89b27773d0"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="246" width="555" height="20" uuid="c2a5f9ad-8a26-4826-b927-6cb1a19ff319"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Vols]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="15" width="228" height="40" uuid="6a0b0c2b-e655-41e2-be80-9d3e63fa951c"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="95" width="123" height="20" uuid="27db36ce-d5c3-4b2e-a069-3e90de9c335a"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="13" width="555" height="29" uuid="8ae32485-96cd-4133-a165-6e14cac966fa"/>
+			</rectangle>
+			<line>
+				<reportElement x="481" y="13" width="1" height="29" uuid="f8b136d5-c8a5-412a-b9c1-65b2c33a55f7"/>
+			</line>
+			<line>
+				<reportElement x="414" y="13" width="1" height="29" uuid="99ff4ee8-b76e-4e81-90f1-d9b93589e994"/>
+			</line>
+			<line>
+				<reportElement x="352" y="13" width="1" height="29" uuid="629fea42-825f-484f-a27a-5d6678048465"/>
+			</line>
+			<line>
+				<reportElement x="290" y="13" width="1" height="29" uuid="fc9a72cf-a8ba-4d44-b28c-9afe9f8bcfe6"/>
+			</line>
+			<line>
+				<reportElement x="240" y="13" width="1" height="29" uuid="9a0e851a-eab5-4b97-9863-44da4b6df1e3"/>
+			</line>
+			<line>
+				<reportElement x="165" y="13" width="1" height="29" uuid="95a6f93e-df9a-4d55-a8d2-f9af4619ea34"/>
+			</line>
+			<line>
+				<reportElement x="109" y="13" width="1" height="29" uuid="096b3f9d-d189-4a79-8d4d-3c909f50dfd8"/>
+			</line>
+			<line>
+				<reportElement x="46" y="13" width="1" height="29" uuid="a037c26a-1b3c-4c0b-8df2-5adee43445bf"/>
+			</line>
+			<staticText>
+				<reportElement x="3" y="22" width="43" height="20" uuid="66517082-224f-45f0-879b-97932700a774"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="22" width="61" height="20" uuid="ed515aec-df0e-464c-ade0-d106539785cc"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Aeroport Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="22" width="54" height="20" uuid="e9ff6280-8198-4a5b-92c3-0060271e5fed"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="22" width="73" height="20" uuid="399c22aa-a149-4b0b-beae-438d8f0ee030"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Heure Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="22" width="48" height="20" uuid="cf3d05f3-0b52-49c2-a4cc-e5bbc435cc0f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Heure Ar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="22" width="60" height="20" uuid="4dd85c2d-5b91-4c3c-9fbd-9283c8ccf3ca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Ar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="22" width="60" height="20" uuid="4eba401b-03e0-409e-b396-db460b432b93"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Aeroport Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="22" width="65" height="20" uuid="627e7029-effe-45f7-8d75-71946f651018"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Prix]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="22" width="72" height="20" uuid="5f6af173-c265-4a1d-9ba9-91d549f1374b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre Place]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="29" uuid="19988888-5d72-4bd8-8947-f77f21ce6cf2"/>
+			</rectangle>
+			<line>
+				<reportElement x="481" y="1" width="1" height="29" uuid="9aabc68d-1954-4cb1-aa22-65687d6acb5e"/>
+			</line>
+			<line>
+				<reportElement x="414" y="1" width="1" height="29" uuid="fe779074-851c-4406-b2fe-cf9d2daa95f6"/>
+			</line>
+			<line>
+				<reportElement x="352" y="1" width="1" height="29" uuid="dffd2d75-9501-46fa-a531-5fceb8b3a0ba"/>
+			</line>
+			<line>
+				<reportElement x="290" y="1" width="1" height="29" uuid="a6ea618a-e26e-4fae-8eae-064f17327873"/>
+			</line>
+			<line>
+				<reportElement x="240" y="1" width="1" height="29" uuid="f2f51bfe-aad3-45be-84d6-9cbbcf71e801"/>
+			</line>
+			<line>
+				<reportElement x="165" y="1" width="1" height="29" uuid="de3b2ae6-48e1-4e71-8e19-bc2501e62c8e"/>
+			</line>
+			<line>
+				<reportElement x="109" y="1" width="1" height="29" uuid="9a39a1b9-4b04-4c83-b5d6-3f698946b105"/>
+			</line>
+			<line>
+				<reportElement x="46" y="1" width="1" height="29" uuid="7a6113fe-1ace-4e8e-8c28-b0ec66671e06"/>
+			</line>
+			<textField>
+				<reportElement x="3" y="10" width="43" height="20" uuid="6c0164ac-2142-40b2-8a05-8d04d9026b2f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="10" width="61" height="20" uuid="b3d181ed-bb54-4cf9-afaa-6f7f15e1fb7d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_nom_aeroport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="10" width="54" height="20" uuid="66815fe3-6adb-4cee-b8e2-e1b33e32fded"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_datedepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="10" width="74" height="20" uuid="08e4a6a3-037c-425b-be7b-e306af2f9250"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_heurdepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="10" width="48" height="20" uuid="cf5621dd-c237-4bc2-b8fb-cc4a1bb56ecd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_heurarrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="10" width="60" height="20" uuid="207938ff-2731-4c50-a14b-b622a101494c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_datearrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="10" width="60" height="20" uuid="cdd3d61e-0e25-4925-8d27-3482fbde5e5d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_nom_aeroport_ar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="10" width="65" height="20" uuid="7f39e3a3-ef8b-4381-bd96-bff71ba53a0e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_prix}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="10" width="72" height="20" uuid="4a7d96c5-629d-4284-a094-3b42519af68b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vol_nbplacereserve}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="3" width="555" height="20" uuid="b961c8f0-c097-4917-a838-2199ba1b5456"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>

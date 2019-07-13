@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportAeroport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="602eb5cf-03ec-4c4f-a1b1-f51bbfbdef8f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     aeroport.`id` AS aeroport_id,
+     aeroport.`id_ville` AS aeroport_id_ville,
+     aeroport.`nom_ville` AS aeroport_nom_ville,
+     aeroport.`nom` AS aeroport_nom
+FROM
+     `aeroport` aeroport]]>
+	</queryString>
+	<field name="aeroport_id" class="java.lang.Integer"/>
+	<field name="aeroport_id_ville" class="java.lang.Integer"/>
+	<field name="aeroport_nom_ville" class="java.lang.String"/>
+	<field name="aeroport_nom" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="268" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="115" width="123" height="20" uuid="206d4fb1-3563-459f-9988-6bfefdf797ef"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="155" width="123" height="20" uuid="ae72ddfb-9930-4c9f-a472-2f9bfc57a47e"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="195" width="76" height="20" uuid="7dcf4e7f-1994-4bac-a76e-9ea5264efb9c"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="95" width="123" height="20" uuid="b23a4029-0545-440f-9e8b-28cc74ef8870"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="135" width="234" height="20" uuid="f593ec8f-07df-46d3-91c8-920e73befc58"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="15" width="228" height="40" uuid="6bc41479-bd20-4ef9-8db0-53965e00cf6d"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="239" height="28" uuid="69fbdbb4-9957-42f2-ac48-2d8f7a5d051f"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="175" width="234" height="20" uuid="4c73e32e-77ad-4f1b-938b-47a3d8358954"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="555" height="20" uuid="041a477f-30ba-431e-9fb8-3bb1ca1ccca0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="75" width="123" height="20" uuid="f4e957cc-5497-4106-8211-003ceb1ae7a1"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="246" width="555" height="20" uuid="71e4ca3b-1f80-443c-9754-cc75e063cce4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Aeroports]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="99" y="7" width="325" height="25" uuid="fc737075-d0e3-472b-91f1-04e1e3d12d88"/>
+			</rectangle>
+			<line>
+				<reportElement x="180" y="7" width="1" height="25" uuid="18fc2944-10a5-4528-9831-38fc10e9ad5d"/>
+			</line>
+			<line>
+				<reportElement x="243" y="7" width="1" height="25" uuid="60a2292a-960d-4ab7-9d68-defd98e4e0b1"/>
+			</line>
+			<line>
+				<reportElement x="341" y="7" width="1" height="25" uuid="3288b586-5bb5-4075-b444-db415b3f38ac"/>
+			</line>
+			<staticText>
+				<reportElement x="99" y="12" width="81" height="20" uuid="60e7671a-d7db-4de2-a353-595c9696b9c1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Aeroport Id ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="12" width="58" height="20" uuid="f23af5ce-4903-48c9-a213-8f98d3b2041f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Ville Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="12" width="97" height="20" uuid="a8b07265-059f-4d7b-9db4-ccc2306b9340"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nom Ville]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="12" width="82" height="20" uuid="6e4da410-9d27-4e1e-b719-edfe9ea2a888"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nom Aeroport]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="99" y="0" width="325" height="25" uuid="373660b5-70ae-4f21-ade5-3242f288155a"/>
+			</rectangle>
+			<line>
+				<reportElement x="180" y="0" width="1" height="25" uuid="51a9a4f0-89d0-4b10-b4ba-e93bedf4cbb7"/>
+			</line>
+			<line>
+				<reportElement x="243" y="0" width="1" height="25" uuid="8e4ffd89-bf6c-418d-b10f-db2d20808b7f"/>
+			</line>
+			<line>
+				<reportElement x="341" y="0" width="1" height="25" uuid="d07d1113-bff6-47b7-a79e-6fcde2926a13"/>
+			</line>
+			<textField>
+				<reportElement x="99" y="5" width="81" height="20" uuid="8a93bd6a-6ac5-4543-ba62-107678a1a376"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{aeroport_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="5" width="58" height="20" uuid="15e1065e-ef84-4569-bedf-91387a8b10b3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{aeroport_id_ville}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="5" width="97" height="20" uuid="78294eb5-a4ac-4eeb-90a1-46018600db81"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{aeroport_nom_ville}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="5" width="82" height="20" uuid="b78aeae4-7d83-4c41-b077-09a6da706e6d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{aeroport_nom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="11c346ea-e4f4-499d-a845-7cdacde9bacb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

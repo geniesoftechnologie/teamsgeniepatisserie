@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportUsers" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a02a9210-8897-4adb-b068-e4318917217e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     users.`id` AS users_id,
+     users.`fname` AS users_fname,
+     users.`lname` AS users_lname,
+     users.`user_name` AS users_user_name,
+     users.`pass` AS users_pass,
+     users.`picture` AS users_picture,
+     users.`statut` AS users_statut
+FROM
+     `users` users]]>
+	</queryString>
+	<field name="users_id" class="java.lang.Integer"/>
+	<field name="users_fname" class="java.lang.String"/>
+	<field name="users_lname" class="java.lang.String"/>
+	<field name="users_user_name" class="java.lang.String"/>
+	<field name="users_pass" class="java.lang.String"/>
+	<field name="users_picture" class="java.lang.Object"/>
+	<field name="users_statut" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="269" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="243" width="555" height="20" uuid="b7b1d971-456d-4a26-a8d6-4cdfc78b3a05"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des utilisateurs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="112" width="123" height="20" uuid="da006d3e-bc32-470f-b14f-20b9284a9cc5"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="12" width="228" height="40" uuid="e8258230-3d6f-4744-bd9d-59fdfd11236a"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="132" width="234" height="20" uuid="0b36763a-f790-4de7-96e3-8550f0962156"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="72" width="123" height="20" uuid="833d5089-7b64-436a-81b9-0bc71b5cd377"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="152" width="123" height="20" uuid="2a97a4f4-606c-4305-9c86-7a39964cb582"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="92" width="123" height="20" uuid="a17a2810-04f5-40ed-9f1b-769c53fc3ddd"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="12" width="239" height="28" uuid="c00749be-3c99-40c0-9141-944486d6cf89"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="172" width="234" height="20" uuid="a8821da8-2ffd-4ad3-9e2d-570ce2d2d6e8"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="192" width="76" height="20" uuid="7118c85d-ca6c-40f9-936a-c03eeb5404f1"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="223" width="555" height="20" uuid="ea4b90c6-92c7-499c-94a7-b20ddf429d4f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="18" y="25" width="515" height="36" uuid="697d03f4-04af-4dc3-a3b7-1d11ffdb575e"/>
+			</rectangle>
+			<line>
+				<reportElement x="437" y="25" width="1" height="36" uuid="cb47baef-6ed9-46f2-a873-74314b6ed22b"/>
+			</line>
+			<line>
+				<reportElement x="338" y="25" width="1" height="36" uuid="d6aa11a4-0f72-478e-8485-ed26b9165d5b"/>
+			</line>
+			<line>
+				<reportElement x="212" y="25" width="1" height="36" uuid="62eef690-2e0e-44cf-9ca7-dc0da2f3e761"/>
+			</line>
+			<line>
+				<reportElement x="117" y="25" width="1" height="36" uuid="003dafcb-cc8b-4d3c-a2df-6197d8ed9c83"/>
+			</line>
+			<staticText>
+				<reportElement x="18" y="41" width="99" height="20" uuid="d099af6b-24f9-4c3d-8e3f-1ae931ca8795"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Agent Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="41" width="94" height="20" uuid="78229007-295a-4aa2-8048-dfdf157aaf08"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Prenom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="41" width="125" height="20" uuid="42b4da83-13fb-4723-aa69-9802aa0d480e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="41" width="98" height="20" uuid="3c25fcc0-1e76-401f-b322-29b71375032d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="41" width="95" height="20" uuid="8cd525b6-4588-4b84-8ef3-fc90b18c10b6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Profil]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="18" y="0" width="515" height="36" uuid="37a3473d-229c-47e7-8db0-2472c04160de"/>
+			</rectangle>
+			<line>
+				<reportElement x="437" y="0" width="1" height="36" uuid="ed95c713-2ce1-4038-beaf-1aad5f21abd1"/>
+			</line>
+			<line>
+				<reportElement x="338" y="0" width="1" height="36" uuid="13864d16-86e2-4a43-9982-3239cfd2e96e"/>
+			</line>
+			<line>
+				<reportElement x="212" y="0" width="1" height="36" uuid="a4f2a385-99e2-4ea5-8efd-658654e21ccd"/>
+			</line>
+			<line>
+				<reportElement x="117" y="0" width="1" height="36" uuid="cdb05026-8d46-4822-b2cf-04628b5aced9"/>
+			</line>
+			<textField>
+				<reportElement x="18" y="16" width="99" height="20" uuid="5925e956-2890-4179-b40a-b2fe348d80b7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{users_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="16" width="94" height="20" uuid="1df7d658-da76-4163-9a13-707aa8573756"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{users_fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="16" width="125" height="20" uuid="05202eeb-2e65-4468-a528-a96d7a18532b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{users_lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="16" width="98" height="20" uuid="170d914c-b0de-4b72-820a-1668f69267e3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{users_user_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="16" width="95" height="20" uuid="6993e315-ef7f-47b8-8151-414169672475"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{users_statut}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="219917e6-41a5-4e8c-941c-55cf3c1081d9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>

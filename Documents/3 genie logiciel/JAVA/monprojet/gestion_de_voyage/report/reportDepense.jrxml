@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportDepense" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5dec0f1b-bda9-46d0-beed-853ddbbf5f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="44"/>
+	<queryString>
+		<![CDATA[SELECT
+     depense.`id` AS depense_id,
+     depense.`motif` AS depense_motif,
+     depense.`montant` AS depense_montant,
+     depense.`dated` AS depense_dated
+FROM
+     `depense` depense]]>
+	</queryString>
+	<field name="depense_id" class="java.lang.Integer"/>
+	<field name="depense_motif" class="java.lang.String"/>
+	<field name="depense_montant" class="java.lang.Integer"/>
+	<field name="depense_dated" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="262" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="221" width="555" height="20" uuid="b501252f-7f21-48df-b0ed-e63d76bf0891"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="175" width="234" height="20" uuid="4840188f-de97-4083-b8be-83f816fa0776"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="241" width="555" height="20" uuid="05774367-8205-497b-81ec-f8f5c5ef94f7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des depenses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="115" width="123" height="20" uuid="d9ee2649-c890-49a2-9589-0c30be2c8616"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="195" width="76" height="20" uuid="70a68380-0da6-4502-a7bf-fc3c95d9533b"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="15" width="228" height="40" uuid="afa8d30f-7f59-46c5-9cd6-2fa76e842f5a"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="15" width="242" height="28" uuid="6b22e1d5-bbaa-4430-98bc-a3afbef8447b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="95" width="123" height="20" uuid="9e6e3b00-10f5-45ca-a6f1-72a62cf2f001"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="135" width="234" height="20" uuid="cbcf96f3-b8b0-45a2-8df7-5fe482774af9"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="75" width="123" height="20" uuid="7a9dc30b-0832-4aa4-8a98-09f30ba5c382"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="155" width="123" height="20" uuid="bf036224-12f2-46c1-bead-eeb902d8f37e"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="57" y="0" width="431" height="29" uuid="549a8691-9348-42be-8599-d89e7757432c"/>
+			</rectangle>
+			<line>
+				<reportElement x="374" y="0" width="1" height="29" uuid="b1b6fa61-f42c-48e1-8df8-8c53611accf8"/>
+			</line>
+			<line>
+				<reportElement x="261" y="0" width="1" height="29" uuid="d5b8e526-1f1f-4509-a0cf-3a5182900dd0"/>
+			</line>
+			<line>
+				<reportElement x="142" y="0" width="1" height="29" uuid="630b1fa7-6b1e-48cf-a7e4-a1df1aa263c5"/>
+			</line>
+			<staticText>
+				<reportElement x="57" y="9" width="85" height="20" uuid="31a992d4-029a-4bd8-b674-52bc5a4a485f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="9" width="118" height="20" uuid="8c38b8e1-197f-4dd4-a429-937b1d13be51"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Motif]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="9" width="112" height="20" uuid="3fccfa1d-ea75-4923-b9c6-4a0b77c9a25d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Montant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="10" width="113" height="20" uuid="c5d75722-9d2b-456d-8dbd-ccce3a6d9e06"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[depense_dated]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="57" y="0" width="431" height="29" uuid="4e51a135-06da-446e-bda0-77f775cd1a6c"/>
+			</rectangle>
+			<line>
+				<reportElement x="374" y="0" width="1" height="29" uuid="b3ed6652-4ac5-4779-a0f3-eb1b3e6f466a"/>
+			</line>
+			<line>
+				<reportElement x="261" y="0" width="1" height="29" uuid="0979ac07-f479-4686-8059-8545e228ffee"/>
+			</line>
+			<line>
+				<reportElement x="142" y="0" width="1" height="29" uuid="579a4bce-d0e4-4e8c-aa13-b24242386f66"/>
+			</line>
+			<textField>
+				<reportElement x="57" y="9" width="85" height="20" uuid="0c4ec6e2-404b-4f03-a79c-de82a6ca5777"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{depense_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="9" width="118" height="20" uuid="b798b073-8bbd-4a87-9ed8-1b248f2ada69"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{depense_motif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="9" width="112" height="20" uuid="a85bc66b-29fc-4e65-9418-3499056b6668"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{depense_montant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="9" width="113" height="20" uuid="a8759c95-4d70-4b95-9d1c-237e2fff6c48"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{depense_dated}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="3" width="555" height="20" uuid="9cf8e9f0-b754-47b8-ad00-8795f80c1d12"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>

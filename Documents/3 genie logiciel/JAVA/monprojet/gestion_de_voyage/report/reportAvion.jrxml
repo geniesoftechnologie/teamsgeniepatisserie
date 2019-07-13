@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportAvion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6ba2b070-228a-4d54-81a8-1cce6c297d8d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     avion.`id` AS avion_id,
+     avion.`id_compagnie` AS avion_id_compagnie,
+     avion.`nom_compagnie` AS avion_nom_compagnie,
+     avion.`nom` AS avion_nom,
+     avion.`dateentree` AS avion_dateentree,
+     avion.`etat` AS avion_etat,
+     avion.`nbplace` AS avion_nbplace,
+     avion.`picture` AS avion_picture,
+     avion.`uid` AS avion_uid
+FROM
+     `avion` avion]]>
+	</queryString>
+	<field name="avion_id" class="java.lang.Integer"/>
+	<field name="avion_id_compagnie" class="java.lang.Integer"/>
+	<field name="avion_nom_compagnie" class="java.lang.String"/>
+	<field name="avion_nom" class="java.lang.String"/>
+	<field name="avion_dateentree" class="java.sql.Date"/>
+	<field name="avion_etat" class="java.lang.Integer"/>
+	<field name="avion_nbplace" class="java.lang.Integer"/>
+	<field name="avion_picture" class="java.lang.Object"/>
+	<field name="avion_uid" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="267" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="174" width="234" height="20" uuid="7e536fab-cfcf-47b6-8671-53d0d01558f0"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="14" width="228" height="40" uuid="c3e94e40-e1f2-43b0-b184-56839ca9078a"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="225" width="555" height="20" uuid="a2cca742-2e1d-4843-91cb-72fe7a7e31ad"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="94" width="123" height="20" uuid="6f721f4d-124b-4b71-befa-5c905ccf8dec"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="74" width="123" height="20" uuid="1b62e2c3-b757-4b90-8b95-6e4d7a77c716"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="14" width="239" height="28" uuid="b8b69fa1-778b-4784-9d22-978210ab79b9"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="154" width="123" height="20" uuid="b328350b-c074-4f02-8b06-6995b6fc5ec1"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="194" width="76" height="20" uuid="58d37ddc-ba59-416d-b33f-3e21efa3af88"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="245" width="555" height="20" uuid="c786481c-d198-42da-999f-037198e1a81d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Avions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="134" width="234" height="20" uuid="7e7ac293-2db3-43a7-a3f9-7366c02e9a9e"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="114" width="123" height="20" uuid="1c0cb662-c56c-4acc-8613-9160f446304a"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<rectangle>
+				<reportElement x="58" y="11" width="442" height="29" uuid="0bc63a87-e15f-414c-8795-dfafd09dd8ff"/>
+			</rectangle>
+			<line>
+				<reportElement x="375" y="11" width="1" height="29" uuid="a5453b7b-d820-4d5e-93ea-1efad89aef24"/>
+			</line>
+			<line>
+				<reportElement x="262" y="11" width="1" height="29" uuid="e757ac12-c15e-42ae-9901-9dcc9ff4c00f"/>
+			</line>
+			<line>
+				<reportElement x="143" y="11" width="1" height="29" uuid="954f1cf1-5598-4d36-ba1d-9903a8df4182"/>
+			</line>
+			<staticText>
+				<reportElement x="58" y="20" width="85" height="20" uuid="48461366-b69c-4f90-9aff-685b6e9cbc46"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Avion Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="20" width="118" height="20" uuid="03c56fe6-c530-4ae6-a1e4-8f5d930fbb65"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nom Compagnie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="21" width="112" height="20" uuid="111b4eaa-073b-4b84-a7f5-5d113ae005ad"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Avion Nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="20" width="124" height="20" uuid="2a8e4038-8c79-4dbf-8499-5eb7f5955ce7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre de place]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="58" y="0" width="442" height="29" uuid="a9fa1bb0-9197-46c8-914b-e8c3b5ede8d7"/>
+			</rectangle>
+			<line>
+				<reportElement x="375" y="0" width="1" height="29" uuid="89502f5e-a6eb-4248-a515-efb2c2071135"/>
+			</line>
+			<line>
+				<reportElement x="262" y="0" width="1" height="29" uuid="77000dcb-e71e-4f4c-8afc-2ca860605e44"/>
+			</line>
+			<line>
+				<reportElement x="143" y="0" width="1" height="29" uuid="c12c0250-c3ad-4ae3-b786-7be4c62223ae"/>
+			</line>
+			<textField>
+				<reportElement x="58" y="9" width="85" height="20" uuid="8cdbb829-e748-401f-baaf-5e3925a3b0c8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{avion_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="9" width="118" height="20" uuid="fa36d8d4-7d4f-4bca-accd-1b97e77129f2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{avion_nom_compagnie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="9" width="112" height="20" uuid="f7645fb5-52fb-4f64-9973-f381738ab9aa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{avion_nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="9" width="124" height="20" uuid="506619ff-dcf8-4499-85f9-9cdb51446bac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{avion_nbplace}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="13ef1f6a-48fe-4a5d-a33d-8ee5651e4af3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

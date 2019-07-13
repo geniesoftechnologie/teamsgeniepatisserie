@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportVolHadj" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f8df5cb-4411-45d3-a229-160da3e49f3a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     volhadj.`id` AS volhadj_id,
+     volhadj.`id_avion` AS volhadj_id_avion,
+     volhadj.`id_aeroport` AS volhadj_id_aeroport,
+     volhadj.`nom_aeroport` AS volhadj_nom_aeroport,
+     volhadj.`datedepart` AS volhadj_datedepart,
+     volhadj.`datearrivee` AS volhadj_datearrivee,
+     volhadj.`heurdepart` AS volhadj_heurdepart,
+     volhadj.`heurarrivee` AS volhadj_heurarrivee,
+     volhadj.`prix` AS volhadj_prix,
+     volhadj.`nbplacereserve` AS volhadj_nbplacereserve,
+     volhadj.`id_aeroport_ar` AS volhadj_id_aeroport_ar,
+     volhadj.`nom_aeroport_ar` AS volhadj_nom_aeroport_ar,
+     volhadj.`duree` AS volhadj_duree,
+     volhadj.`etat` AS volhadj_etat
+FROM
+     `volhadj` volhadj]]>
+	</queryString>
+	<field name="volhadj_id" class="java.lang.Integer"/>
+	<field name="volhadj_id_avion" class="java.lang.Integer"/>
+	<field name="volhadj_id_aeroport" class="java.lang.Integer"/>
+	<field name="volhadj_nom_aeroport" class="java.lang.String"/>
+	<field name="volhadj_datedepart" class="java.sql.Date"/>
+	<field name="volhadj_datearrivee" class="java.sql.Date"/>
+	<field name="volhadj_heurdepart" class="java.lang.String"/>
+	<field name="volhadj_heurarrivee" class="java.lang.String"/>
+	<field name="volhadj_prix" class="java.lang.Integer"/>
+	<field name="volhadj_nbplacereserve" class="java.lang.Integer"/>
+	<field name="volhadj_id_aeroport_ar" class="java.lang.Integer"/>
+	<field name="volhadj_nom_aeroport_ar" class="java.lang.String"/>
+	<field name="volhadj_duree" class="java.lang.Integer"/>
+	<field name="volhadj_etat" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="265" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="221" width="555" height="20" uuid="66e24301-0025-4199-ba11-73dd9f640b38"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="175" width="234" height="20" uuid="78eea50c-804c-4baf-b247-c2fe7314c00b"/>
+				<text><![CDATA[EMAIL : technolab@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="241" width="555" height="20" uuid="6a3ed42b-608b-45d8-aec1-22c4a2eb6462"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Vols Hadj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="115" width="123" height="20" uuid="a88fb8fe-1e50-470c-8daa-76e09216b8ba"/>
+				<text><![CDATA[BAMAKO  - MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="195" width="76" height="20" uuid="4b5c8c17-1ce6-4880-8ea7-f2e31e8dc20a"/>
+				<text><![CDATA[BAMAKO LE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="15" width="228" height="40" uuid="1215abad-697c-4fba-9a05-28c904cdb978"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Technolab Air Line Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="242" height="28" uuid="dea4b749-7518-413f-bfa7-d8683c9def6e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Agence de voge ISTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="95" width="123" height="20" uuid="0ad0ead2-60cb-4f03-a5df-c824ff1a897e"/>
+				<text><![CDATA[RUE SOTELMA MALITEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="135" width="234" height="20" uuid="ffeea43d-0ff0-4fb9-b0ab-74271039af31"/>
+				<text><![CDATA[TELEPHONE : +223 77 77 77 77 /  66 66 66 66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="75" width="123" height="20" uuid="eb6f20da-dd81-4789-8305-26bad0605c60"/>
+				<text><![CDATA[HAMDALLAYE ACI 2000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="155" width="123" height="20" uuid="d7e1a3da-bcb6-48c2-80f2-2ad1dc3e2d0f"/>
+				<text><![CDATA[FAX ; +223 22 22 22 22]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="11" width="555" height="29" uuid="8cb6d115-39bf-4654-b527-ec4040bd03fb"/>
+			</rectangle>
+			<line>
+				<reportElement x="481" y="11" width="1" height="29" uuid="29ccd8b7-7412-4c25-9965-3cf3c845d4ce"/>
+			</line>
+			<line>
+				<reportElement x="414" y="11" width="1" height="29" uuid="8d599d84-f249-4549-b770-b55118786245"/>
+			</line>
+			<line>
+				<reportElement x="352" y="11" width="1" height="29" uuid="0a5470a0-cc5c-4aa6-9e62-a620a5a9f8cb"/>
+			</line>
+			<line>
+				<reportElement x="290" y="11" width="1" height="29" uuid="d8f86255-f6ce-48f9-87c3-ff6873d2d7c4"/>
+			</line>
+			<line>
+				<reportElement x="240" y="11" width="1" height="29" uuid="4b6d926e-0d41-412c-9ecf-cbbf8504856c"/>
+			</line>
+			<line>
+				<reportElement x="165" y="11" width="1" height="29" uuid="1d44bca5-3493-48a5-afb2-26aa6c05944d"/>
+			</line>
+			<line>
+				<reportElement x="109" y="11" width="1" height="29" uuid="3e9bfdf2-a3b1-4179-9cb9-0bb1e04f76a7"/>
+			</line>
+			<line>
+				<reportElement x="46" y="11" width="1" height="29" uuid="571ab658-b7f9-4b6b-86e6-cad4bb72f8b0"/>
+			</line>
+			<staticText>
+				<reportElement x="3" y="20" width="43" height="20" uuid="74222066-0ff0-48d5-99da-0b04996d6642"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="21" width="62" height="20" uuid="bd4177a8-68a1-44d5-b600-5674552cd97c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Aeroport Nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="21" width="55" height="20" uuid="315f1964-1a30-44e0-a6b8-75a73ad466f7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="21" width="74" height="20" uuid="3ae945bb-2b0e-43d2-a5e0-e4de72060f2f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Heure Dep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="21" width="45" height="20" uuid="b193d315-ff8e-4f19-87ad-3d1deaa1d47b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Heure Ar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="21" width="61" height="20" uuid="5e17e8f1-0361-47ad-bffb-28375629cabe"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Ar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="20" width="61" height="20" uuid="33a77d7a-0a88-4601-9e56-08a7da9aedd8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Aeroport Ar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="20" width="66" height="20" uuid="4296fc01-34fe-4470-b18a-f6f873c725d4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Prix]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="20" width="73" height="20" uuid="cfcc9538-21e2-416c-bbdc-e6819129c283"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre Place]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="29" uuid="762b231d-b149-4ded-bcba-ced8aa556173"/>
+			</rectangle>
+			<line>
+				<reportElement x="481" y="0" width="1" height="29" uuid="e5331994-6dfe-49b1-8a82-b72e1bf8eacc"/>
+			</line>
+			<line>
+				<reportElement x="414" y="0" width="1" height="29" uuid="9e276166-8c65-4369-a498-12cea778d75f"/>
+			</line>
+			<line>
+				<reportElement x="352" y="0" width="1" height="29" uuid="9275d14a-5fc2-47b3-a39c-14b137618347"/>
+			</line>
+			<line>
+				<reportElement x="290" y="0" width="1" height="29" uuid="8758db20-02a0-4d7c-a014-8d37ccc6db80"/>
+			</line>
+			<line>
+				<reportElement x="240" y="0" width="1" height="29" uuid="2e1f5917-4eb4-4a67-988c-60033237b618"/>
+			</line>
+			<line>
+				<reportElement x="165" y="0" width="1" height="29" uuid="a8760fc5-919c-45fa-9080-04f247ac8ce1"/>
+			</line>
+			<line>
+				<reportElement x="109" y="0" width="1" height="29" uuid="927c31a1-58d3-4b06-b31e-6646c4078546"/>
+			</line>
+			<line>
+				<reportElement x="46" y="0" width="1" height="29" uuid="1f76e055-bfe1-4582-9656-d04dc864f236"/>
+			</line>
+			<textField>
+				<reportElement x="3" y="9" width="43" height="20" uuid="af59313e-800f-4d25-a3e1-94f4156bf2c4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="9" width="62" height="20" uuid="46064309-16e3-44de-af42-f94d6a64a136"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_nom_aeroport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="9" width="55" height="20" uuid="a4464a86-57fb-4cf0-acbc-f509bfb94862"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_datedepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="9" width="74" height="20" uuid="f24bde2f-246d-4475-8295-c02bd50896ba"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_heurdepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="9" width="50" height="20" uuid="e02da03b-8a50-49cf-881f-88bab2560855"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_heurarrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="9" width="61" height="20" uuid="d8178b3e-6928-4890-a1a0-45c1272016d7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_datearrivee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="9" width="62" height="20" uuid="23c3f3e9-27df-4f38-8f7b-5b807cf9953d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_nom_aeroport_ar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="9" width="66" height="20" uuid="471c3506-2e1c-4e3f-95b0-e3d2d660082c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_prix}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="9" width="73" height="20" uuid="0a1ceebb-683e-4388-b8f3-f4c85482ab6d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{volhadj_nbplacereserve}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="a7f5b42d-3618-417c-8a6f-c2412d7b90fb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="10" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch"/>
+	</summary>
+</jasperReport>
