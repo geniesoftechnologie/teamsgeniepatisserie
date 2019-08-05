@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="250" pageHeight="500" columnWidth="15" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="f6dce808-ac66-49c5-8927-b4be9371f312">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     operationdetail.`idod` AS operationdetail_idod,
+     operationdetail.`id_operation` AS operationdetail_id_operation,
+     operationdetail.`categorie` AS operationdetail_categorie,
+     operationdetail.`designation` AS operationdetail_designation,
+     operationdetail.`pu` AS operationdetail_pu,
+     operationdetail.`quantite` AS operationdetail_quantite,
+     operationdetail.`numf` AS operationdetail_numf
+FROM
+     `operationdetail` operationdetail]]>
+	</queryString>
+	<field name="operationdetail_idod" class="java.lang.Long"/>
+	<field name="operationdetail_id_operation" class="java.lang.Long"/>
+	<field name="operationdetail_categorie" class="java.lang.String"/>
+	<field name="operationdetail_designation" class="java.lang.String"/>
+	<field name="operationdetail_pu" class="java.lang.Integer"/>
+	<field name="operationdetail_quantite" class="java.lang.Integer"/>
+	<field name="operationdetail_numf" class="java.lang.Long"/>
+	<variable name="total_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<variable name="quantite" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{operationdetail_pu}*$F{operationdetail_quantite}]]></variableExpression>
+	</variable>
+	<variable name="montant" class="java.lang.Integer">
+		<variableExpression><![CDATA[$F{operationdetail_pu}*$F{operationdetail_quantite}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="18" width="215" height="41" uuid="7fdadce1-2cf2-421a-b5c9-b4c8859dbf0d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="52" y="28" width="148" height="20" uuid="a6eabf0c-c3c1-41d7-a65a-6f4ee0987d2c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mali Baguette]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="5" width="57" height="20" uuid="d2ec0a7c-6bab-43a2-9762-bf697718cb7b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="5" width="40" height="20" uuid="53681165-6469-43f3-84b5-4aa3b4747be9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Quantite]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="5" width="40" height="20" uuid="1b5aae17-7828-46f4-b74e-ccefa9af4310"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Prix Unitaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="5" width="40" height="20" uuid="cd164121-f190-42e3-8fc6-599fcfdbe6a4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[montant]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="10" width="57" height="20" uuid="20a307f1-4c6c-4d96-b197-36b92bcbdcb3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{operationdetail_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="10" width="40" height="20" uuid="c9f9326e-b390-4e3c-8ec6-0085c53c7334"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{operationdetail_pu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="10" width="40" height="20" uuid="6ff48683-9b6a-4f80-a8d0-5b0ad3c39c8c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{operationdetail_quantite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="10" width="40" height="20" uuid="b287cf05-20ff-40de-83c2-cc70460947b8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{montant}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch">
+			<line>
+				<reportElement x="12" y="0" width="213" height="1" uuid="c2324317-58fb-4ec5-9e1b-f76658ec5f3b"/>
+			</line>
+			<staticText>
+				<reportElement x="120" y="1" width="54" height="20" uuid="3c38f09b-e9d1-4cf0-aba2-9918dcb3740b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="1" width="40" height="20" uuid="e023971d-0a75-4e83-b429-b17d7760a4d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{quantite}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="37" splitType="Stretch"/>
+	</summary>
+</jasperReport>
